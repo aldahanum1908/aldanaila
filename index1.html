@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Shoe Stories</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="c:\Users\ASUS\Downloads\logo.jpeg" height="120" width="130" align="center" />
+        <h1>Toko Shoe Stories</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Beranda</a></li>
+                <li><a href="#" onclick="showPage('profile')">Profil</a></li>
+                <li><a href="#" onclick="showPage('transactions')">Transaksi</a></li>
+                <li><a href="#" onclick="showPage('login')">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten Halaman -->
+    <main>
+        <!-- Beranda -->
+        <section id="home" class="page active">
+            <h2>Selamat Datang di Toko Shoe Stories</h2>
+            <p>Temukan sepatu terbaik dengan harga terjangkau!</p>
+            <div class="product-container">
+                <div class="product">
+                    <img src="c:\Users\ASUS\Downloads\sneakers 2.jpeg" alt="Sepatu 1">
+                    <h3>Sepatu Sneaker</h3>
+                    <p>Rp 350.000</p>
+                    <button onclick="addToCart('Sepatu Sneaker', 350000)">Tambah ke Keranjang</button>
+                </div>
+                <div class="product">
+                    <img src="c:\Users\ASUS\Downloads\sepatu formal.jpeg" alt="Sepatu 2">
+                    <h3>Sepatu Formal</h3>
+                    <p>Rp 500.000</p>
+                    <button onclick="addToCart('Sepatu Formal', 500000)">Tambah ke Keranjang</button>
+                </div>
+                <div class="product">
+                    <img src="c:\Users\ASUS\Downloads\sepatu running.jpeg" alt="Sepatu 3">
+                    <h3>Sepatu Olahraga</h3>
+                    <p>Rp 400.000</p>
+                    <button onclick="addToCart('Sepatu Olahraga', 400000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profil -->
+        <section id="profile" class="page">
+            <h2>Profil Toko</h2>
+            <p>Toko Shoe Stories</strong> adalah toko sepatu yang berkomitmen untuk menyediakan sepatu berkualitas tinggi dengan harga yang terjangkau.
+                 Kami melayani pelanggan di seluruh Indonesia dan menyediakan berbagai macam sepatu, dari sepatu olahraga, sepatu formal, hingga sepatu kasual yang stylish. 
+                 Dengan berbagai pilihan model dan ukuran, kami menjamin setiap pelanggan menemukan sepatu yang cocok dengan gaya dan kebutuhan mereka.</p>
+            <p>Kami hanya menggunakan bahan-bahan berkualitas dan desain terkini untuk memastikan setiap produk yang kami jual memberikan kenyamanan dan kepercayaan diri bagi pemakainya.
+                Selain itu, kami juga berkomitmen untuk memberikan pelayanan terbaik, mulai dari pemilihan produk hingga pengiriman tepat waktu </p>
+                <img src="c:\Users\ASUS\Downloads\WhatsApp Image 2024-12-27 at 14.40.19.jpeg">
+                <img src="c:\Users\ASUS\Downloads\WhatsApp Image 2024-12-27 at 14.40.39.jpeg">
+                <img src="c:\Users\ASUS\Downloads\WhatsApp Image 2024-12-27 at 14.40.20.jpeg">
+            </section>
+
+
+        <!-- Transaksi -->
+        <section id="transactions" class="page">
+            <h2>Transaksi</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: Rp 0</p>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+
+        <!-- Login -->
+        <section id="login" class="page">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                
+                <button type="button" onclick="login()">Login</button>
+            </form>
+            <div id="loginResult"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Alda Naila Hanum. 2024 Toko Shoe Stories. Semua Hak Dilindungi.</p>
+    </footer>
+</body>
+</html>
